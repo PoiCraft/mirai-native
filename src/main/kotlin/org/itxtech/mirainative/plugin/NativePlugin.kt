@@ -51,7 +51,7 @@ data class NativePlugin(val file: File, val id: Int) {
             }
             field = v
         }
-    private val events = hashMapOf<Int, String>()
+    val events = hashMapOf<Int, String>()
     val entries = arrayListOf<FloatingWindowEntry>()
 
     private fun registerFws(fws: ArrayList<Status>) {

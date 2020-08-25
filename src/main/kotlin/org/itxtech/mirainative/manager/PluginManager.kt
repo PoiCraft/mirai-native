@@ -139,6 +139,9 @@ object PluginManager {
         if (NativeBridge.unloadPlugin(plugin) == 0) {
             plugin.loaded = false
             plugin.enabled = false
+            plugin.started = false
+            plugin.entries.clear()
+            plugin.events.clear()
             Tray.update()
         }
     }
